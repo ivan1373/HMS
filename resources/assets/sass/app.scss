@@ -1,0 +1,114 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400,700');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Variables
+@import "variables";
+
+@import "~admin-lte/dist/css/adminlte.min.css";
+@import "~admin-lte/plugins/font-awesome/css/font-awesome.min.css";
+//@import "~admin-lte/dist/css/adminlte.min.css";
+//@import "~admin-lte/dist/css/adminlte.min.css";
+//@import "~admin-lte/dist/css/adminlte.min.css";
+//admin
+//@import "admin";
+//@import "admin_blue";
+
+
+//Ionicons
+//@import '~ionicons/dist/scss/ionicons';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Font awesome
+@import '~font-awesome/scss/font-awesome';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.procitano {
+  background-image: linear-gradient(to right top, #b2d7de, #acd3db, #a6cfd7, #9fcbd4, #99c7d1);
+  opacity:0.9;
+}
+
+.rezervirano {
+  background-image: #e17575;
+}
+
+.slobodno {
+  background-image: lightgreen!important;
+}
+
+.jumbotron h1 {
+  font-family: 'Lora', serif;
+}
+
+.admin-right {
+  background-image: linear-gradient(to right top, #1b291b, #193029, #1c3637, #253b43, #34404c);
+}
+
+#sobe1 h3, #sobe2 h3, #sobe3 h3 {
+  font-family: 'Cormorant Unicase', serif;
+}
+#myPieChart,#myPieChart2 {
+  width: 100%; 
+  min-height: 450px;
+}/*
+.row {
+  margin:0 !important;
+}
+
+/*.jumbotron {
+  background: url('/images/pozadina8.jpeg') no-repeat center center fixed!important;
+}
+*/
+.content-wrapper{
+  background-color: #F8F9FA!important;
+}
+
+
+form, .card-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-indigo {
+  background-color: purple;
+}
+
+.slide-fade-enter-active {
+  transition: all .6s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+#greska-body {
+  background-color: #e9ecef!important;
+  font-family: 'Bangers', cursive;
+}
+
+th {
+  cursor: pointer;
+}
+
+
+
+
