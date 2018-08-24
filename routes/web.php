@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/sobe/izmjena/{id}', 'SobeController@update');
     Route::get('/admin/sobe/{id}','SobeController@show');
     Route::get('/admin/sobe/ociscena/{id}','SobeController@clean');
+    Route::get('/admin/sobe/brisi/{id}','SobeController@destroy');
     Route::get('/admin/dodaj_sobu', 'SobeController@create');
     Route::post('/admin/dodaj_sobu', 'SobeController@store');
 

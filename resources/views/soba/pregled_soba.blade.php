@@ -21,6 +21,17 @@
 <div class="tab-content" id="myTabContent">
 <div class="container-fluid tab-pane fade show active"  id="home" role="tabpanel" aria-labelledby="home-tab">
   <div class="row">
+  @if(session()->has('spremanje'))
+            
+              <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success">
+                  <strong>{{session()->get('spremanje')}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    &times;</button>
+              </div>
+           
+  @endif
+  </div>
+  <div class="row">
   @foreach($sobe as $soba)
   @if($soba->brkreveta == 1)
     <div class="col-sm-4" align="center">
@@ -43,14 +54,8 @@
               <a href="{{ url('/admin/sobe/')}}/{{ $soba->id }}" class="btn btn-info" >Detalji <i class="fa fa-info"></i></a>&nbsp;
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
               <hr>
-              <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>
-              @if(session()->has('spremanje'))
-              <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success">
-                  <strong>{{session()->get('spremanje')}}</strong>
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                    &times;</button>
-              </div>
-              @endif
+              <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>&nbsp;
+              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}" >Izbriši <i class="fa fa-trash"></i></a>
           </div>
       </div>
     </div>
@@ -61,6 +66,9 @@
 </div>
 
 <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="container-fluid tab-pane fade">
+  <div class="row">
+  
+  </div>
   <div class="row">
   @foreach($sobe as $soba)
   @if($soba->brkreveta == 2)
@@ -83,14 +91,8 @@
               <a href="{{ url('/admin/sobe/')}}/{{ $soba->id }}" class="btn btn-info" >Detalji <i class="fa fa-info"></i></a>&nbsp;
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
               <hr>
-              <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>
-              @if(session()->has('spremanje'))
-              <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success">
-                  <strong>{{session()->get('spremanje')}}</strong>
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                    &times;</button>
-              </div>
-              @endif
+              <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>&nbsp;
+              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}" >Izbriši <i class="fa fa-trash"></i></a>
           </div>
       </div>
     </div>
@@ -100,6 +102,9 @@
 </div>
 
 <div id="contact" role="tabpanel" aria-labelledby="contact-tab" class="container-fluid tab-pane fade">
+  <div class="row">
+  
+  </div>
   <div class="row">
   @foreach($sobe as $soba)
   @if($soba->brkreveta == 3)
@@ -122,14 +127,9 @@
               <a href="{{ url('/admin/sobe/')}}/{{ $soba->id }}" class="btn btn-info" >Detalji <i class="fa fa-info"></i></a>&nbsp;
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
               <hr>
-              <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>
-              @if(session()->has('spremanje'))
-              <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success">
-                  <strong>{{session()->get('spremanje')}}</strong>
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                    &times;</button>
-              </div>
-              @endif
+              <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>&nbsp;
+              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}" >Izbriši <i class="fa fa-trash"></i></a>
+              
           </div>
       </div>
     </div>

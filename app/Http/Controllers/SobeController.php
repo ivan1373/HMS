@@ -115,9 +115,10 @@ class SobeController extends Controller
     {
         //
         $room = Soba::findOrFail($id);
-        $room -> cistoca = '1';
+        $room->cistoca = '1';
         $room -> save();
         session()->flash('spremanje','Soba očišćena!');
+
         return back();
     }
 
@@ -176,5 +177,8 @@ class SobeController extends Controller
     public function destroy($id)
     {
         //
+        $room = Soba::findOrFail($id);
+        $room->delete();
+        return back();
     }
 }
