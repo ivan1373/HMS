@@ -81,6 +81,7 @@
         <th>Doručak (DA/NE) <i class="fa fa-sort"></i></th>
         <th>Vrijeme Početka <i class="fa fa-sort"></i></th>
         <th>Vrijeme Završetka <i class="fa fa-sort"></i></th>
+        <th>Iznos Računa <i class="fa fa-money"></i></th>
         <th>Radnja</th>
       </tr>
     </thead>
@@ -95,6 +96,7 @@
         <td>{{ $rezervacija->dorucak == '1' ? 'DA' : 'NE' }}</td>
         <td class="{{ $rezervacija->zavrsena == '1' ? 'table-warning' : ''}}">{{ $rezervacija->datum_od }}</td>
         <td class="{{ $rezervacija->zavrsena == '1' ? 'table-warning' : ''}}">{{ $rezervacija->datum_do }}</td>
+        <td>{{ $rezervacija->iznos }} BAM</td>
         <td>
           @if($rezervacija->zavrsena == 0 && $rezervacija->naplacena == 0)
           <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/rezervacije/otkaz/')}}/{{ $rezervacija->id }}" class="btn btn-danger {{$rezervacija->zavrsena ? 'disabled':''}} btn-sm">Otkaži <i class="fa fa-ban"></i></a>&nbsp;

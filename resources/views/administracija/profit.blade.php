@@ -23,7 +23,7 @@
       var data = google.visualization.arrayToDataTable([
         ["ID Rezervacije", "Iznos u BAM", { role: "style" } ],
         @foreach ($rezervacije as $rezervacija)
-        [ "{{ $rezervacija->id }}", {{ $rezervacija->iznos }}, 'blue' ], 
+        [ "{{ $rezervacija->id }}", {{ $rezervacija->iznos }}, '#1abc9c' ], 
         @endforeach
         //["Copper", 8.94, "#b87333"],
         
