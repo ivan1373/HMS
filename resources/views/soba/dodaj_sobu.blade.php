@@ -38,11 +38,6 @@
                     <textarea class="form-control" name="opis" rows="4"></textarea>
                   </div>
                   <div class="form-group">
-                    <label>Slika Sobe</label>
-                    <input type="text" class="form-control" name="slika" aria-describedby="slikaHelp">
-                    <small id="slikaHelp" class="form-text text-muted">Potrebno je unijeti URL adresu slike.</small>
-                  </div>
-                  <div class="form-group">
                   <label>Broj Kreveta</label>
                   <select name="brojKr" class="form-control" style="width: 100%;">
                     <option value="1" selected="selected">1</option>

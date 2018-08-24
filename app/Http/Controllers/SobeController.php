@@ -49,7 +49,6 @@ class SobeController extends Controller
         $request->validate([
             'naziv' => 'required|unique:sobe|min:5',
             'opis' => 'required',
-            'slika' => 'required',
             'brojKr' => 'required',
             'balkon' => 'required',
             //'status' => 'required'
@@ -61,8 +60,6 @@ class SobeController extends Controller
 
         $kreveti = $request->get('brojKr');
         $room->brkreveta = $kreveti;
-
-        $room->slika = $request->get('slika');
 
         $balk = $request->get('balkon');
         if($balk == 'DA')
@@ -150,25 +147,18 @@ class SobeController extends Controller
         //
         $room = Soba::findOrFail($id)->where('status','0')->first();
         $request->validate([
-            'naziv' => 'required|unique:sobe|min:5',
+            'naziv' => 'required|min:5',
             'opis' => 'required',
             'brojKr' => 'required',
+            'cijena' => 'required',
         ]);
         $room->naziv = $request->get('naziv');
         $room->opis = $request->get('opis');
 
         $kreveti = $request->get('brojKr');
         $room->brkreveta = $kreveti;
-        if($kreveti == 1)
-        {
-            $room->cijena_nocenja = 50;
-        }
-        else if($kreveti == 2)
-        {
-            $room->cijena_nocenja = 75;
-        }
-        else
-            $room->cijena_nocenja = 100;
+        
+        $room->cijena_nocenja = $request->get('cijena');
 
         $room->save();
 

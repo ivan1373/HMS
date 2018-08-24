@@ -35,7 +35,11 @@
                   </div>
                   <div class="form-group">
                     <label>Kratak Opis</label>
-                    <textarea class="form-control" value="{{$room->opis}}" name="opis" rows="4"></textarea>
+                    <textarea class="form-control" name="opis" rows="4"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Nova Cijena</label>
+                    <input type="text" class="form-control" value="{{$room->cijena_nocenja}}" name="cijena">
                   </div>
                   <div class="form-group">
                   <label>Broj Kreveta</label>

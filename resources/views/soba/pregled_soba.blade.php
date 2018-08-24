@@ -37,7 +37,7 @@
               <p class="card-text"><cite>{{ $soba->opis }}</cite></p>
               <p class="card-text">broj kreveta: &nbsp;<b>{{ $soba->brkreveta }}</b></p>
               <p class="card-text">balkon: &nbsp;<b>{{ $soba->balkon == '1' ? 'DA' : 'NE'}}</b></p>
-              <p class="card-text">cijena noćenja: &nbsp;<b>50 BAM</b></p>
+              <p class="card-text">cijena noćenja: &nbsp;<b>{{ $soba->cijena_nocenja }} BAM</b></p>
               <p class="card-text">čista: &nbsp;<b>{{ $soba->cistoca == '1' ? 'DA' : 'NE'}}</b></p>
               <hr>
               <a href="{{ url('/admin/sobe/')}}/{{ $soba->id }}" class="btn btn-info" >Detalji <i class="fa fa-info"></i></a>&nbsp;
@@ -78,7 +78,7 @@
               <p class="card-text"><cite>{{ $soba->opis }}</cite></p>
               <p class="card-text">broj kreveta: &nbsp;<b>{{ $soba->brkreveta }}</b></p>
               <p class="card-text">balkon: &nbsp;<b>{{ $soba->balkon == '1' ? 'DA' : 'NE'}}</b></p>
-              <p class="card-text">cijena noćenja: &nbsp;<b>75 BAM</b></p>
+              <p class="card-text">cijena noćenja: &nbsp;<b>{{ $soba->cijena_nocenja }} BAM</b></p>
               <p class="card-text">čista: &nbsp;<b>{{ $soba->cistoca == '1' ? 'DA' : 'NE'}}</b></p><hr>
               <a href="{{ url('/admin/sobe/')}}/{{ $soba->id }}" class="btn btn-info" >Detalji <i class="fa fa-info"></i></a>&nbsp;
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
@@ -117,7 +117,7 @@
               <p class="card-text"><cite>{{ $soba->opis }}</cite></p>
               <p class="card-text">broj kreveta: &nbsp;<b>{{ $soba->brkreveta }}</b></p>
               <p class="card-text">balkon: &nbsp;<b>{{ $soba->balkon == '1' ? 'DA' : 'NE'}}</b></p>
-              <p class="card-text">cijena noćenja: &nbsp;<b>100 BAM</b></p>
+              <p class="card-text">cijena noćenja: &nbsp;<b>{{ $soba->cijena_nocenja }} BAM</b></p>
               <p class="card-text">čista: &nbsp;<b>{{ $soba->cistoca == '1' ? 'DA' : 'NE'}}</b></p><hr>
               <a href="{{ url('/admin/sobe/')}}/{{ $soba->id }}" class="btn btn-info" >Detalji <i class="fa fa-info"></i></a>&nbsp;
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>

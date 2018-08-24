@@ -11,7 +11,7 @@ class Soba extends Model
   //  public $primarykey = 'id';
     public $timestamps = true;
     protected $fillable = [
-       'naziv', 'opis', 'broj_kreveta', 'slika', 'status', 'balkon', 'cistoca', 'cijena_nocenja',
+       'naziv', 'opis', 'broj_kreveta', 'status', 'balkon', 'cistoca', 'cijena_nocenja',
    ];
 
    public function rezervacija()
