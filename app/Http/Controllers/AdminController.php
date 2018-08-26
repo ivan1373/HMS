@@ -39,10 +39,6 @@ class AdminController extends Controller
         return view('administracija.administration',compact('brSoba','brKorisnika','brNapomena','brojZ','rezervacije','napomene','jednokrevetne', 'dvokrevetne','trokrevetne','regular','admin','super'));
     }
 
-    public function dodajKorisnika()
-    {
-        return view('korisnik.dodaj_korisnika');
-    }
 
     public function pohraniKorisnika(Request $request)
     {

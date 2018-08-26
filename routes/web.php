@@ -44,7 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
     
     //korisnici
     Route::get('/admin/pregled_korisnika', 'UserController@index');
-    Route::get('/admin/dodaj_radnika', 'AdminController@dodajKorisnika');
+    Route::get('/admin/dodaj_radnika', 'UserController@create');
     Route::post('/admin/dodaj_radnika', 'UserController@store');
     Route::get('/admin/pregled_korisnika/brisi/{id}','UserController@destroy');
     Route::get('/admin/pregled_korisnika/uredi_podatke/{id}', 'UserController@edit');
