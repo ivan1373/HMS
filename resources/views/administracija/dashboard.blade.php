@@ -145,7 +145,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 @if($brojZ == 0)
                 <i class="right fa fa-angle-left"></i>
                 @else
-                <span class="badge badge-warning right">{{$brojZ}}</span>
+                <span class="badge badge-warning right h-50">{{$brojZ}}</span>
                 @endif
               </p>
             </a>
@@ -172,7 +172,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 @if($napomene == 0)
                 <i class="right fa fa-angle-left"></i>
                 @else
-                <span class="badge badge-info right">{{$napomene}}</span>
+                <span class="badge badge-info right h-50">{{$napomene}}</span>
                 @endif
               </p>
             </a>
