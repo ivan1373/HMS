@@ -16,7 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand bg-light navbar-light border-bottom shadow">
+  <nav class="main-header navbar navbar-expand bg-info navbar-light border-bottom shadow">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
