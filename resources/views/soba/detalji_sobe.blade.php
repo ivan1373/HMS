@@ -33,7 +33,7 @@
                             <h5>Rezervirano na: {{ $rezervacija->ime }}, {{ $rezervacija->prezime }}</h5>
                         </li>
                         <li class="list-group-item">
-                            <h5>Trajanje rezervacije: {{ $rezervacija->datum_od }} - {{ $rezervacija->datum_do }}</h5>
+                            <h5>Rezervirana do: {{ $krajRez }}</h5>
                         </li>
                         @endif
                         <li class="list-group-item">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Soba;
 use App\Rezervacija;
+use Carbon\Carbon;
 
 class SobeController extends Controller
 {
@@ -102,7 +103,10 @@ class SobeController extends Controller
         //
         $soba = Soba::findOrFail($id);
         $rezervacija = Rezervacija::where('id_sobe',$soba->id)->latest()->first();
-        return view('soba.detalji_sobe',compact('soba','rezervacija'));
+
+        date_default_timezone_set('Europe/Sarajevo');
+        $krajRez = Carbon::parse($rezervacija->datum_do)->format('d-m-Y H:i:s');
+        return view('soba.detalji_sobe',compact('soba','rezervacija','krajRez'));
     }
 
     /**

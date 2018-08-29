@@ -113,7 +113,7 @@ class AdminController extends Controller
         Carbon::setLocale('hr');
         date_default_timezone_set('Europe/Sarajevo');
         $datum = Carbon::now()->format('d/m/Y');
-        $vrijeme = Carbon::now()->format('d-m-Y H:m:i');
+        $vrijeme = Carbon::now()->format('d-m-Y H:i:s');
         $korisnici = User::whereDate('created_at', Carbon::today())->count();
         $rezervacije = Rezervacija::whereDate('created_at', Carbon::today())->count();
         $napomene = Napomena::whereDate('created_at', Carbon::today())->count();

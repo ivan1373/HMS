@@ -46,6 +46,9 @@
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
+                    <b>Registriran</b> <a class="float-right">{{$user->created_at->diffForHumans()}}</a>
+                  </li>
+                  <li class="list-group-item">
                     <b>E-Mail</b> <a class="float-right">{{$user->email}}</a>
                   </li>
                   <li class="list-group-item">
@@ -59,7 +62,7 @@
               <!-- /.card-body -->
               @if(session()->has('spremanje'))
               
-              <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success">
+              <div class="alert alert-success">
                   <strong>{{session()->get('spremanje')}}</strong>
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                     &times;</button>

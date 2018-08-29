@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="main" class="container bg-light rounded">
+<div id="main" class="container bg-light rounded shadow">
     <h2 class="text-center">SUSTAV ZA ADMINISTRACIJU HOTELSKOG SMJEŠTAJA<br><br></h2>
     <div class="row">
         <div class="col-sm-4 prvi" align="center">

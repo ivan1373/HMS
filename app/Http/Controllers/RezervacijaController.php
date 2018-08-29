@@ -19,6 +19,11 @@ class RezervacijaController extends Controller
     {
         $reservations = Rezervacija::orderBy('datum_do','desc')->get();
         //$reservations = Rezervacija::sortable()->paginate(5);
+        foreach($reservations as $reservation)
+        {
+            $reservation->datum_od=Carbon::parse($reservation->datum_od)->format('d-m-Y H:i:s');
+            $reservation->datum_do=Carbon::parse($reservation->datum_do)->format('d-m-Y H:i:s');
+        }
         return view('rezervacija.rezervacije',compact('reservations'));
     }
 
@@ -178,7 +183,7 @@ class RezervacijaController extends Controller
         $soba->save();
         
         date_default_timezone_set('Europe/Sarajevo');
-        $danas = Carbon::now()->format('d-m-Y H:m:i');
+        $danas = Carbon::now()->format('d-m-Y H:i:s');
 
         $pocetak = Carbon::parse($rezervacija->datum_od);
         $kraj = Carbon::parse($rezervacija->datum_do);

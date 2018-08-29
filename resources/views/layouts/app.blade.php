@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         #glavni-naslov{
-            font-family: 'Monoton', cursive;
+            font-family: 'Poller One', cursive;
             
         }
 
@@ -51,10 +51,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel shadow">
             <div class="container">
                 <a id="glavni-naslov" class="navbar-brand text-danger" href="{{ url('/') }}">
-                    HOTEL &nbsp; ADMINISTRATION
+                    HMS
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

@@ -16,7 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand bg-info navbar-light border-bottom shadow">
+  <nav class="main-header navbar navbar-expand bg-info navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -87,7 +87,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
                 <a href="{{url('/admin')}}" class="nav-link">
                   <i class="fa fa-tachometer nav-icon"></i>
-                  <p>Osnovna Statistika</p>
+                  <p>Statistika</p>
                 </a>
           </li>
           <li class="nav-item has-treeview menu-closed">
@@ -203,6 +203,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Profit</p>
                 </a>
           </li>
+          <li class="nav-item">
+                <a href="{{url('/')}}" class="nav-link">
+                  <i class="fa fa-home nav-icon"></i>
+                  <p>Početna Stranica</p>
+                </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -250,7 +256,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-  <footer class="main-footer bg-light">
+  <footer class="main-footer bg-light no-print">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
       Završni rad Ivan Miloš 2018
