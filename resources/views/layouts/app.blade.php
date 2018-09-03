@@ -25,7 +25,7 @@
         }
 
         body{
-            background: url('/images/pozadina.png') no-repeat center center fixed;
+            background: url('/images/pozadina2.png') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
