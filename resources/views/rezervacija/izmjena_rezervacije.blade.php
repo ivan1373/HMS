@@ -27,6 +27,7 @@
               @endif
               <form method="post" action="{{ url('/admin/rezervacije/izmjena_rez')}}/{{$rezervacija->id}}" role="form">
               @csrf
+              {{method_field('PUT')}}
                 <div class="card-body">
                   <div class="form-group">
                     <label>Ime Gosta</label>

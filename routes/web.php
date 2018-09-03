@@ -25,13 +25,13 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/admin', 'AdminController@index');
     Route::get('/admin/osobne_postavke', 'AdminController@prikaziOP');
-    Route::post('/admin/osobne_postavke/{id}', 'AdminController@izmjenaPodataka');
+    Route::put('/admin/osobne_postavke/{id}', 'AdminController@izmjenaPodataka');
     Route::get('/admin/izvjestaj', 'AdminController@report');
 
     //sobe
     Route::get('/admin/sobe', 'SobeController@index');
     Route::get('/admin/sobe/izmjena/{id}', 'SobeController@edit');
-    Route::post('/admin/sobe/izmjena/{id}', 'SobeController@update');
+    Route::put('/admin/sobe/izmjena/{id}', 'SobeController@update');
     Route::get('/admin/sobe/{id}','SobeController@show');
     Route::get('/admin/sobe/ociscena/{id}','SobeController@clean');
     Route::get('/admin/sobe/brisi/{id}','SobeController@destroy');
@@ -48,7 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/dodaj_radnika', 'UserController@store');
     Route::get('/admin/pregled_korisnika/brisi/{id}','UserController@destroy');
     Route::get('/admin/pregled_korisnika/uredi_podatke/{id}', 'UserController@edit');
-    Route::post('/admin/pregled_korisnika/uredi_podatke/{id}', 'UserController@update');
+    Route::put('/admin/pregled_korisnika/uredi_podatke/{id}', 'UserController@update');
     Route::get('/admin/pregled_korisnika/detalji/{id}','UserController@show');
     
     
@@ -57,7 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/stvori_napomenu', 'NapomenaController@store');
     Route::get('/admin/napomene', 'NapomenaController@index');
     Route::get('/admin/napomene/{id}', 'NapomenaController@show');
-    Route::get('/admin/napomene/procitana/{id}','NapomenaController@update');
+    Route::put('/admin/napomene/procitana/{id}','NapomenaController@update');
     Route::get('/admin/napomene/izbrisana/{id}','NapomenaController@destroy');
 
     //rezervacije
@@ -65,7 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/nova_rez', 'RezervacijaController@create');
     Route::post('/admin/nova_rez', 'RezervacijaController@store');
     Route::get('/admin/rezervacije/izmjena_rez/{id}', 'RezervacijaController@edit');
-    Route::post('/admin/rezervacije/izmjena_rez/{id}', 'RezervacijaController@update');
+    Route::put('/admin/rezervacije/izmjena_rez/{id}', 'RezervacijaController@update');
     Route::get('/admin/rezervacije/otkaz/{id}', 'RezervacijaController@cancel');
     Route::get('/admin/rezervacije/zavrsi/{id}', 'RezervacijaController@end');
     Route::get('/admin/rezervacije/ukloni/{id}', 'RezervacijaController@destroy');

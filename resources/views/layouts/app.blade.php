@@ -25,11 +25,12 @@
         }
 
         body{
-            background: url('/images/pozadina10.jpg') no-repeat center center fixed;
+            background: url('/images/pozadina.png') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
             -o-background-size: cover;
+            /*background-color:white;*/
         }
 
         #main h2, #main p{

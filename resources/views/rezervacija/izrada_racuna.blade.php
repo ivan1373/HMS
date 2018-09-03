@@ -87,7 +87,7 @@
 
               <div class="row">
                 <!-- accepted payments column -->
-                <div class="col-6"><br>
+                <div class="col-6 my-auto"><br>
                   <p class="lead text-center">Posjetite nas opet!</p>
                    
                   </p>

@@ -125,6 +125,7 @@
               @endif
               <form method="post" role="form" action="{{url('/admin/pregled_korisnika/uredi_podatke')}}/{{$user->id}}">
               @csrf
+              {{method_field('PUT')}}
                 <div class="card-body">
                   <div class="form-group">
                     <label>Ime</label>

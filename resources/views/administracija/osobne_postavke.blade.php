@@ -28,7 +28,7 @@
               @endif
               <form role="form" method="post" action="{{url('/admin/osobne_postavke/')}}/{{Auth::user()->id}}">
               @csrf
-              
+              {{method_field('PUT')}}
                 <div class="card-body">
                   <div class="form-group">
                     <label>Ime</label>

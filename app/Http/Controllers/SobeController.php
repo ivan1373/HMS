@@ -182,7 +182,13 @@ class SobeController extends Controller
     {
         //
         $room = Soba::findOrFail($id);
-        $room->delete();
-        return back();
+        if($room->status == '1')
+        {
+            $room->delete();
+            return back();
+        }
+        else
+            return back();
+        
     }
 }

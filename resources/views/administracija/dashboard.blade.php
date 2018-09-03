@@ -51,7 +51,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="{{url('images/aaa.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{url('/admin/osobne_postavke')}}" class="d-block">{{Auth::user()->name}}</a>
+          <a href="{{url('/admin/osobne_postavke')}}" class="d-block">{{Auth::user()->name}}
+          @if(Auth::user()->isAdmin())
+           (Administrator)
+          @elseif(Auth::user()->isRegular())
+           (Standardni)
+          @else
+           (SuperAdmin)
+          @endif
+          </a>
         </div>
       </div>
 
@@ -84,9 +92,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               
             </ul>
           </li>-->
+          @if(!Auth::user()->isRegular())
           <li class="nav-item">
                 <a href="{{url('/admin')}}" class="nav-link">
-                  <i class="fa fa-tachometer nav-icon"></i>
+                  <i class="fa fa-line-chart nav-icon"></i>
                   <p>Statistika</p>
                 </a>
           </li>
@@ -105,6 +114,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Dodaj Sobu</p>
                 </a>
               </li>
+          @endif
+          @if(!Auth::user()->isRegular())
               <li class="nav-item">
                 <a href="{{url('/admin/sobe')}}" class="nav-link">
                   <i class="fa fa-search-plus nav-icon"></i>
@@ -136,6 +147,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
+          @endif
+          @if(Auth::user()->isRegular())
+          <li class="nav-item">
+                <a href="{{url('/admin/sobe')}}" class="nav-link">
+                  <i class="fa fa-search-plus nav-icon"></i>
+                  <p>Pregled Soba</p>
+                </a>
+          </li>
+          @endif
           <li class="nav-item has-treeview menu-closed">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-bell"></i>
@@ -191,9 +211,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
+          @if(!Auth::user()->isRegular())
           <li class="nav-item">
                 <a href="{{url('/admin/izvjestaj')}}" class="nav-link">
-                  <i class="fa fa-file nav-icon"></i>
+                  <i class="fa fa-file-pdf-o nav-icon"></i>
                   <p>Dnevni Izvještaj</p>
                 </a>
           </li>
@@ -203,6 +224,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Profit</p>
                 </a>
           </li>
+          @endif
           <li class="nav-item">
                 <a href="{{url('/')}}" class="nav-link">
                   <i class="fa fa-home nav-icon"></i>
