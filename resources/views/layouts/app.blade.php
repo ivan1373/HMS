@@ -41,7 +41,7 @@
             margin-top:125px;
             margin-bottom: 50px;
             padding: 75px 15px;
-            background-color: #e9ecef!important;
+            background-color: #F7F7F7!important;
         }
 
         .prvi,.drugi,.treci {

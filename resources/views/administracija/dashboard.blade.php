@@ -211,7 +211,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
-          @if(!Auth::user()->isRegular())
+          @if(Auth::user()->isSuperAdmin())
           <li class="nav-item">
                 <a href="{{url('/admin/izvjestaj')}}" class="nav-link">
                   <i class="fa fa-file-pdf-o nav-icon"></i>

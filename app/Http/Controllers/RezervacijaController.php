@@ -15,6 +15,9 @@ class RezervacijaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    
     public function index()
     {
         $reservations = Rezervacija::orderBy('datum_do','desc')->get();

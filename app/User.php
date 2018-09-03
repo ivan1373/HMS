@@ -29,19 +29,19 @@ class User extends Authenticatable
 
     public function isAdmin()
     {
-        if($this->isadmin && $this->isregular == 0)
+        if($this->isadmin=='1' && $this->isregular == '0')
         return true;
     }
 
     public function isRegular()
     {
-        if($this->isadmin == 0 && $this->isregular)
+        if($this->isadmin =='0'  && $this->isregular=='1')
         return true;
     }
 
     public function isSuperAdmin()
     {
-        if($this->isadmin && $this->isregular)
+        if($this->isadmin=='1' && $this->isregular=='1')
         return true;
     }
 }

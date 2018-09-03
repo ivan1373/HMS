@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use App\User;
 
 class Kernel extends HttpKernel
 {
@@ -62,5 +63,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\MustBeAdmin::class,
         'super' => \App\Http\Middleware\SuperAdmin::class,
         'reg' => \App\Http\Middleware\RegularUser::class,
+        'adminOrSuper' => \App\Http\Middleware\adminOrSuper::class,
     ];
 }
