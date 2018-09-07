@@ -45,7 +45,7 @@
               </form>
               @if(session()->has('spremanje'))
               
-              <div class="alert alert-success">
+              <div class="alert alert-success" role="alert">
                   <strong>{{session()->get('spremanje')}}</strong>
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                     &times;</button>
