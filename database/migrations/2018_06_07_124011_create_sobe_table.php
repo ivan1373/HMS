@@ -20,7 +20,7 @@ class CreateSobeTable extends Migration
             $table->integer('brkreveta');
             $table->string('slika');
             $table->boolean('balkon');
-            //zauzeta ili slobodna
+            //1=>rezervirana, 0=>slobodna
             $table->boolean('status');
             $table->boolean('cistoca');
             $table->timestamps();
