@@ -24,7 +24,11 @@
                   @endif
               </p>
               <a href="{{ url('/admin/pregled_korisnika/detalji/') }}/{{$user->id}}" class="btn btn-info">Detalji/ Postavke <i class="fa fa-info"></i></a><hr>
-              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/pregled_korisnika/brisi/') }}/{{$user->id}}" class="btn btn-danger">Izbriši <i class="fa fa-trash"></i></a>
+              <form method="post" action="{{ url('/admin/pregled_korisnika/brisi/')}}/{{ $user->id }}">
+                @csrf
+                {{ method_field('delete') }}
+              <button type="submit" onclick="return confirm('Da li ste sigurni?')" class="btn btn-danger btn-sm">Izbriši <i class="fa fa-trash"></i></button>
+              </form>
           </div>
       </div>
     </div>

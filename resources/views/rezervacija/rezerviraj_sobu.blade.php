@@ -23,7 +23,6 @@
                     <li>{{$error}}</li>
                   @endforeach
                 </ul>
-                
               </div>
               @endif
               <form method="post" action="{{ url('/admin/nova_rez') }}" role="form">

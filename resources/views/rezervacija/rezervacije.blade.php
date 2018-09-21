@@ -108,7 +108,11 @@
           @endif
     
           @if($rezervacija->naplacena)
-          <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/rezervacije/ukloni/')}}/{{ $rezervacija->id }}" class="btn btn-warning btn-sm">Ukloni <i class="fa fa-trash"></i></a>
+          <form method="post" action="{{ url('/admin/rezervacije/ukloni/')}}/{{ $rezervacija->id }}">
+            @csrf
+            {{ method_field('delete') }}
+          <button type="submit" onclick="return confirm('Da li ste sigurni?')" class="btn btn-warning btn-sm">Ukloni <i class="fa fa-trash"></i></button>
+          </form>
           @endif
         </td>
       </tr>

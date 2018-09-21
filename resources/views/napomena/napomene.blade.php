@@ -29,7 +29,11 @@
         <td><b>{{ $napomena->created_at->diffForHumans() }}</b></td>
         <td>
             <a href="{{ url('/admin/napomene/procitana/')}}/{{ $napomena->id }}" class="btn btn-success {{ $napomena->procitana == '1' ? 'disabled' : ''}} btn-sm">Pročitano <i class="fa fa-check"></i></a> &nbsp;
-            <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/napomene/izbrisana/')}}/{{ $napomena->id }}" class="btn btn-danger btn-sm">Izbriši <i class="fa fa-trash"></i></a>
+            <form method="post" action="{{ url('/admin/napomene/izbrisana/')}}/{{ $napomena->id }}">
+              @csrf
+              {{ method_field('delete') }}
+            <button type="submit" onclick="return confirm('Da li ste sigurni?')" class="btn btn-danger btn-sm">Izbriši <i class="fa fa-trash"></i></button>
+            </form>
         </td>
       </tr>
     @empty

@@ -8,10 +8,9 @@ use App\User;
 class Napomena extends Model
 {
     //
-     //
      protected $table = 'napomene';
-     //  public $primarykey = 'id';
      public $timestamps = true;
+     
        protected $fillable = [
           'naslov', 'sadrzaj',  'id_korisnika', 'procitana',
       ];

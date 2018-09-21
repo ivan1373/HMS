@@ -55,7 +55,11 @@
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
               <hr>
               <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>&nbsp;
-              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}" >Izbriši <i class="fa fa-trash"></i></a>
+              <form method="post" action="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}">
+                @csrf
+                {{ method_field('delete') }}
+              <button type="submit" onclick="return confirm('Da li ste sigurni?')" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}">Izbriši <i class="fa fa-trash"></i></button>
+              </form>
           </div>
       </div>
     </div>
@@ -92,7 +96,11 @@
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
               <hr>
               <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>&nbsp;
-              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}" >Izbriši <i class="fa fa-trash"></i></a>
+              <form method="post" action="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}">
+                @csrf
+                {{ method_field('delete') }}
+              <button type="submit" onclick="return confirm('Da li ste sigurni?')" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}">Izbriši <i class="fa fa-trash"></i></button>
+              </form>
           </div>
       </div>
     </div>
@@ -128,7 +136,11 @@
               <a href="{{ url('/admin/sobe/izmjena')}}/{{ $soba->id }}" class="btn btn-primary {{ $soba->status == '1' ? 'disabled' : ''}}" >Izmjena <i class="fa fa-cog"></i></a>
               <hr>
               <a href="{{ url('/admin/sobe/ociscena/')}}/{{ $soba->id }}" class="btn btn-secondary {{ $soba->cistoca == '1' ? 'disabled' : ''}}" >Očisti <i class="fa fa-leaf text-success"></i></a>&nbsp;
-              <a onclick="return confirm('Da li ste sigurni?')" href="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}" >Izbriši <i class="fa fa-trash"></i></a>
+              <form method="post" action="{{ url('/admin/sobe/brisi/')}}/{{ $soba->id }}">
+                @csrf
+                {{ method_field('delete') }}
+              <button type="submit" onclick="return confirm('Da li ste sigurni?')" class="btn btn-warning {{ $soba->status == '1' ? 'disabled' : ''}}">Izbriši <i class="fa fa-trash"></i></button>
+              </form>
               
           </div>
       </div>
