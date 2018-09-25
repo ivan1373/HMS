@@ -22,7 +22,7 @@ class UserController extends Controller
         //
         $users = User::All();
 
-        return view('korisnik.pregled_zaposlenika')->with('users',$users);
+        return view('korisnik.pregled_zaposlenika',compact('users'));
     }
 
     /**

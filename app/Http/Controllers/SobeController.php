@@ -151,7 +151,7 @@ class SobeController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $room = Soba::findOrFail($id)->where('status','0')->first();
+        $room = Soba::findOrFail($id);
         $request->validate([
             'naziv' => 'required|min:5',
             'opis' => 'required',

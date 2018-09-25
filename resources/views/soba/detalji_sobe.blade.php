@@ -30,7 +30,7 @@
                         </li>
                         @if($soba->status == 1)
                         <li class="list-group-item">
-                            <h5>Rezervirano na: {{ $rezervacija->ime }}, {{ $rezervacija->prezime }}</h5>
+                            <h5>Rezervirano na: {{ $rezervacija->ime }} {{ $rezervacija->prezime }}</h5>
                         </li>
                         <li class="list-group-item">
                             <h5>Rezervirana do: {{ $krajRez }}</h5>

@@ -25,7 +25,7 @@
         }
 
         body{
-            background: url('/images/pozadina2.png') no-repeat center center fixed;
+            background: url('/images/nova.jpeg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
@@ -40,8 +40,8 @@
         #main {
             margin-top:125px;
             margin-bottom: 50px;
-            padding: 75px 15px;
-            background-color: #F7F7F7!important;
+            padding: 50px 15px;
+            /*background-color: #F7F7F7!important;*/
         }
 
         .prvi,.drugi,.treci {
@@ -52,7 +52,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel shadow">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a id="glavni-naslov" class="navbar-brand text-danger" href="{{ url('/') }}">
                     HMS

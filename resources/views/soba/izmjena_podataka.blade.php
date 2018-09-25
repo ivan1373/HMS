@@ -26,9 +26,9 @@
                 
               </div>
               @endif
-              <form method="post" action="{{ url('/admin/sobe/izmjena')}}/{{$room->id}}" role="form">
+              <form method="post" action="{{ url('/admin/sobe/izmjena/')}}/{{$room->id}}" role="form">
               @csrf
-              {{method_field('PUT')}}
+              @method('PUT')
                 <div class="card-body">
                   <div class="form-group">
                     <label>Naziv Sobe</label>

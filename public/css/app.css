@@ -13535,7 +13535,8 @@ a.text-dark:focus {
   background-color: #F8F9FA !important;
 }
 
-form,
+/*form, */
+
 .card-title {
   font-family: 'Playfair Display', serif;
 }
