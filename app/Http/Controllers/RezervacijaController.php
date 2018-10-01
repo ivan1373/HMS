@@ -57,7 +57,7 @@ class RezervacijaController extends Controller
         $request->validate([
             'ime' => 'required',
             'prezime' => 'required',
-            'datum-od' => 'required',
+            'datum-od' => 'required|before:datum-do',
             'datum-do' => 'required|after:datum-od',
         ]);
 
@@ -216,7 +216,7 @@ class RezervacijaController extends Controller
     {
         //
         $rezervacija = Rezervacija::where('naplacena','1')->findOrFail($id);
-        $rezervacija -> delete();
+        $rezervacija->delete();
         session()->flash('brisanje','Rezervacija uspješno uklonjena!');
         return back();
     }

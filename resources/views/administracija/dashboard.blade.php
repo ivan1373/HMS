@@ -94,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>-->
           @if(!Auth::user()->isRegular())
           <li class="nav-item">
-                <a href="{{url('/admin')}}" class="nav-link">
+                <a href="{{url('/admin/dashboard')}}" class="nav-link">
                   <i class="fa fa-line-chart nav-icon"></i>
                   <p>Statistika</p>
                 </a>
@@ -297,7 +297,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
+    $("#myTable tr, #myTable2 tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
     
