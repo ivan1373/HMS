@@ -25,7 +25,7 @@
         }
 
         body{
-            background: url('/images/nova.jpeg') no-repeat center center fixed;
+            background: url('/images/pozadina.png') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
@@ -89,7 +89,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                    <a class="dropdown-item text-dark" href="{{url('/admin')}}">
+                                    <a class="dropdown-item text-dark" href="{{url('/admin/dashboard')}}">
                                         Administracija
                                     </a>
                                 </div>

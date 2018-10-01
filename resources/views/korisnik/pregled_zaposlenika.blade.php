@@ -12,9 +12,9 @@
       <div class="card shadow" style="width: 15rem;">
         <img class="card-img-top" style="border:1px solid lightgray;" src="{{url('images/user1.png')}}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{ $user->name }}</h5><hr>
+            <h5 class="card-title">{{ $user->name }} <i class="fa fa-star {{($user->isadmin && $user->isregular) ? 'text-warning':'text-info'}}"></i></h5><hr>
               <p class="card-text">e-mail adresa: &nbsp;<cite>{{ $user->email }}</cite></p>
-              <p class="card-text">vrsta računa:&nbsp;
+              <p id="rola" class="card-text">vrsta računa:&nbsp;
                   @if( $user->isregular == '1' && $user->isadmin == '1' )
                   SUPERADMINISTRATOR
                   @elseif( $user->isregular && $user->isadmin != '1')

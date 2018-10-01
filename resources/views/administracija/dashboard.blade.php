@@ -37,7 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-info elevation-4">
     <!-- Brand Logo -->
-    <a href="{{url('/admin')}}" class="brand-link bg-dark">
+    <a href="{{url('/admin/dashboard')}}" class="brand-link bg-dark">
       <img src="{{url('images/bbb.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light"><samp>Administracija</samp></span>

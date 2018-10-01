@@ -20,6 +20,6 @@ class MustBeAdmin
             return $next($request);
         }
 
-        return redirect('/admin');
+        return redirect('/admin/dashboard');
     }
 }

@@ -21,7 +21,7 @@ class adminOrSuper
             return $next($request);
         }
 
-        return redirect('/admin');
+        return redirect('/admin/dashboard');
     
     }
 }

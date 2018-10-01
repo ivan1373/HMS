@@ -16,7 +16,7 @@ class Soba extends Model
 
    public function rezervacija()
     {
-        return $this->hasOne('App\Rezervacija', 'id_sobe');
+        return $this->hasOne('App\Rezervacija', 'id_sobe')->withDefault();
     }
 
 }

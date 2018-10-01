@@ -17,6 +17,6 @@ class Napomena extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User','id_korisnika');
+        return $this->belongsTo('App\User','id_korisnika')->withDefault();
     }
 }
