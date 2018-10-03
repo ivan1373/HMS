@@ -80,6 +80,9 @@
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-dark" href="{{url('/admin/dashboard')}}">
+                                        Administracija
+                                    </a>
                                     <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -89,9 +92,6 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                    <a class="dropdown-item text-dark" href="{{url('/admin/dashboard')}}">
-                                        Administracija
-                                    </a>
                                 </div>
                             </li>
                         @endguest
