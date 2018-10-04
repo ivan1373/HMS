@@ -25,7 +25,7 @@
         }
 
         body{
-            background: url('/images/pozadina.png') no-repeat center center fixed;
+            background: url('/images/pozadina2.png') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
@@ -54,7 +54,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a id="glavni-naslov" class="navbar-brand text-danger" href="{{ url('/') }}">
+                <a id="glavni-naslov" class="navbar-brand text-info" href="{{ url('/') }}">
                     HMS
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
